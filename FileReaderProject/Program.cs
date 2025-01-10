@@ -10,7 +10,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Lütfen dosya yolunu girin:"); //C:\Users\Emirhan Uysal\Desktop\example_file.txt
+        Console.WriteLine("Lütfen dosya yolunu girin:"); //C:\Users\ALİ\Desktop\example_file.txt
         string filePath = Console.ReadLine();
 
         // Dosya kontrolü
