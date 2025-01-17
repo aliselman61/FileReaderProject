@@ -11,9 +11,11 @@ class Program
 {
     static void Main(string[] args)
     {
+PdfAdd
         System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 
         Console.WriteLine("Lütfen dosya yolunu girin:"); // Örn: C:\Users\ALİ\Desktop\example_file.txt
+
         string filePath = Console.ReadLine();
 
         // Dosya kontrolü.
