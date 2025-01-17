@@ -3,32 +3,36 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Packaging;
+using UglyToad.PdfPig;
+using System.Diagnostics;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Lütfen dosya yolunu girin:"); //C:\Users\Emirhan Uysal\Desktop\example_file.txt
+        System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+
+        Console.WriteLine("Lütfen dosya yolunu girin:"); // Örn: C:\Users\ALİ\Desktop\example_file.txt
         string filePath = Console.ReadLine();
 
-        // Dosya kontrolü
+        // Dosya kontrolü.
         if (!File.Exists(filePath))
         {
             Console.WriteLine("Hata: Belirtilen dosya yolu geçerli değil.");
             return;
         }
 
-        // Dosya türü kontrolü
+        // Dosya türü kontrolü.
         string fileExtension = Path.GetExtension(filePath).ToLower();
-        if (fileExtension != ".txt" && fileExtension != ".docx")
+
+        if (fileExtension != ".txt" && fileExtension != ".docx" && fileExtension != ".pdf")
         {
-            Console.WriteLine("Hata: Yalnızca .txt ve .docx dosya türleri destekleniyor.");
+            Console.WriteLine("Hata: Yalnızca .txt, .docx ve .pdf dosya türleri destekleniyor.");
             return;
         }
 
-        // Dosya içeriğini okuma
+        // Dosya içeriğini okuma.
         string content = string.Empty;
         try
         {
@@ -40,6 +44,10 @@ class Program
             {
                 content = ReadDocxContent(filePath);
             }
+            else if (fileExtension == ".pdf")
+            {
+                content = ReadPdfContent(filePath);
+            }
         }
         catch (Exception ex)
         {
@@ -47,11 +55,11 @@ class Program
             return;
         }
 
-        // İçeriği analiz etme
+        // İçeriği analiz etme.
         AnalyzeContent(content);
     }
 
-    // .docx dosyalarını okumak için yardımcı yöntem
+    // .docx dosyalarını okumak için yardımcı yöntem.
     static string ReadDocxContent(string filePath)
     {
         using (WordprocessingDocument doc = WordprocessingDocument.Open(filePath, false))
@@ -60,13 +68,27 @@ class Program
         }
     }
 
-    // İçerik analiz yöntemi
+    // .pdf dosyalarını okumak için yardımcı yöntem.
+    static string ReadPdfContent(string filePath)
+    {
+        string content = string.Empty;
+        using (PdfDocument pdf = PdfDocument.Open(filePath))
+        {
+            foreach (var page in pdf.GetPages())
+            {
+                content += page.Text;
+            }
+        }
+        return content;
+    }
+
+    // İçerik analiz yöntemi.
     static void AnalyzeContent(string content)
     {
-        // Kelimeleri bulma
+        // Kelimeleri bulma.
         string[] words = Regex.Split(content.ToLower(), @"\W+").Where(w => !string.IsNullOrEmpty(w)).ToArray();
 
-        // Farklı kelime sayısı
+        // Farklı kelime sayısı.
         int uniqueWordCount = words.Distinct().Count();
 
         // Tekrar eden kelimeler
@@ -74,14 +96,14 @@ class Program
                                  .Where(g => g.Count() > 1)
                                  .ToDictionary(g => g.Key, g => g.Count());
 
-        // Noktalama işaretlerini bulma
+        // Noktalama işaretlerini bulma.
         var punctuationMarks = Regex.Matches(content, @"[.,;:!?()""'“”‘’]")
                                     .Cast<Match>()
                                     .Select(m => m.Value)
                                     .GroupBy(p => p)
                                     .ToDictionary(g => g.Key, g => g.Count());
 
-        // Sonuçları yazdırma
+        // Sonuçları yazdırma.
         Console.WriteLine($"Toplam farklı kelime sayısı: {uniqueWordCount}");
 
         Console.WriteLine("\nTekrar eden kelimeler ve tekrar sayıları:");
