@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,26 +6,28 @@ using System.Text.RegularExpressions;
 using DocumentFormat.OpenXml.Packaging;
 using UglyToad.PdfPig;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 class Program
 {
+    [STAThread]
     static void Main(string[] args)
     {
-PdfAdd
         System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 
-        Console.WriteLine("Lütfen dosya yolunu girin:"); // Örn: C:\Users\ALİ\Desktop\example_file.txt
+        string filePath = SelectFileWithDialog();
+        if (string.IsNullOrEmpty(filePath))
+        {
+            Console.WriteLine("Hata: Geçerli bir dosya seçilmedi.");
+            return;
+        }
 
-        string filePath = Console.ReadLine();
-
-        // Dosya kontrolü.
         if (!File.Exists(filePath))
         {
             Console.WriteLine("Hata: Belirtilen dosya yolu geçerli değil.");
             return;
         }
 
-        // Dosya türü kontrolü.
         string fileExtension = Path.GetExtension(filePath).ToLower();
 
         if (fileExtension != ".txt" && fileExtension != ".docx" && fileExtension != ".pdf")
@@ -34,7 +36,6 @@ PdfAdd
             return;
         }
 
-        // Dosya içeriğini okuma.
         string content = string.Empty;
         try
         {
@@ -57,8 +58,22 @@ PdfAdd
             return;
         }
 
-        // İçeriği analiz etme.
         AnalyzeContent(content);
+    }
+
+    static string SelectFileWithDialog()
+    {
+        using (OpenFileDialog openFileDialog = new OpenFileDialog())
+        {
+            openFileDialog.Title = "Lütfen bir dosya seçin";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                return openFileDialog.FileName;
+            }
+        }
+        return null;
     }
 
     // .docx dosyalarını okumak için yardımcı yöntem.
