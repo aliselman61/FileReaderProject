@@ -48,10 +48,6 @@
               "target": "Package",
               "version": "[2.11.0, )"
             },
-            "PDFsharp": {
-              "target": "Package",
-              "version": "[6.1.1, )"
-            },
             "PdfPig": {
               "target": "Package",
               "version": "[0.1.9, )"
