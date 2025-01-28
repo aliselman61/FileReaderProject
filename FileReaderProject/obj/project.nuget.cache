@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a7vxYJXhrHk=",
+  "dgSpecHash": "mO9gq6rq54U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALİ\\Source\\Repos\\FileReaderProject_\\FileReaderProject\\FileReaderProject.csproj",
+  "projectFilePath": "C:\\Users\\ALİ\\Desktop\\FileReaderProject\\FileReaderProject\\FileReaderProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALİ\\.nuget\\packages\\documentformat.openxml\\2.11.0\\documentformat.openxml.2.11.0.nupkg.sha512",
     "C:\\Users\\ALİ\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
