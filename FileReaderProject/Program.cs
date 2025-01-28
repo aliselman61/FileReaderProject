@@ -99,19 +99,29 @@ class Program
         return content;
     }
 
+    static readonly HashSet<string> Conjunctions = new HashSet<string>
+    {
+     "ve","ile","ama","fakat","lakin","çünkü","yalnız","ya","veya","1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30","a","b","c","ç","d","e","f","g","ğ","h","ı","i","j","k","l","m","n","o","ö","p","r","s","ş","t","u","ü","v","y","z","q","w","x",
+     "ki","oysa","dahi","de","da","hem","ise","bu","en","bir","emco","was","here",
+    };
+
     // İçerik analiz yöntemi.
     static void AnalyzeContent(string content)
     {
         // Kelimeleri bulma.
         string[] words = Regex.Split(content.ToLower(), @"\W+").Where(w => !string.IsNullOrEmpty(w)).ToArray();
 
-        // Farklı kelime sayısı.
-        int uniqueWordCount = words.Distinct().Count();
 
-        // Tekrar eden kelimeler
-        var repeatedWords = words.GroupBy(w => w)
-                                 .Where(g => g.Count() > 1)
-                                 .ToDictionary(g => g.Key, g => g.Count());
+        var filteredWords = words.Where(word => !Conjunctions.Contains(word)).ToArray();
+
+        // Farklı kelime sayısı.
+        int uniqueWordCount = filteredWords.Distinct().Count();
+
+        // Tekrar eden kelimeler.
+        var repeatedWords = filteredWords.GroupBy(w => w)
+                                         .Where(g => g.Count() > 1)
+                                          .OrderByDescending(g => g.Count())
+                                         .ToDictionary(g => g.Key, g => g.Count());
 
         // Noktalama işaretlerini bulma.
         var punctuationMarks = Regex.Matches(content, @"[.,;:!?()""'“”‘’]")

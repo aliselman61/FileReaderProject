@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALİ\\Source\\Repos\\FileReaderProject_\\FileReaderProject\\FileReaderProject.csproj": {}
+    "C:\\Users\\ALİ\\Desktop\\FileReaderProject\\FileReaderProject\\FileReaderProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALİ\\Source\\Repos\\FileReaderProject_\\FileReaderProject\\FileReaderProject.csproj": {
+    "C:\\Users\\ALİ\\Desktop\\FileReaderProject\\FileReaderProject\\FileReaderProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALİ\\Source\\Repos\\FileReaderProject_\\FileReaderProject\\FileReaderProject.csproj",
+        "projectUniqueName": "C:\\Users\\ALİ\\Desktop\\FileReaderProject\\FileReaderProject\\FileReaderProject.csproj",
         "projectName": "FileReaderProject",
-        "projectPath": "C:\\Users\\ALİ\\Source\\Repos\\FileReaderProject_\\FileReaderProject\\FileReaderProject.csproj",
+        "projectPath": "C:\\Users\\ALİ\\Desktop\\FileReaderProject\\FileReaderProject\\FileReaderProject.csproj",
         "packagesPath": "C:\\Users\\ALİ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALİ\\Source\\Repos\\FileReaderProject_\\FileReaderProject\\obj\\",
+        "outputPath": "C:\\Users\\ALİ\\Desktop\\FileReaderProject\\FileReaderProject\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "UsingMicrosoftNETSdk": false,
