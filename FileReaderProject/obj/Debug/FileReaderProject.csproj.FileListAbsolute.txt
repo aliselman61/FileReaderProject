@@ -19,8 +19,6 @@ C:\Users\ALİ\Source\Repos\FileReaderProject_\FileReaderProject\obj\Debug\FileRe
 C:\Users\ALİ\Source\Repos\FileReaderProject_\FileReaderProject\obj\Debug\FileReaderProject.exe
 C:\Users\ALİ\Source\Repos\FileReaderProject_\FileReaderProject\obj\Debug\FileReaderProject.pdb
 C:\Users\ALİ\Source\Repos\FileReaderProject_\FileReaderProject\bin\Debug\System.Buffers.dll
-C:\Users\ALİ\Source\Repos\FileReaderProject_\FileReaderProject\bin\Debug\System.Drawing.Common.dll
-C:\Users\ALİ\Source\Repos\FileReaderProject_\FileReaderProject\bin\Debug\System.Drawing.Common.pdb
 C:\Users\ALİ\Source\Repos\FileReaderProject_\FileReaderProject\bin\Debug\System.Memory.dll
 C:\Users\ALİ\Source\Repos\FileReaderProject_\FileReaderProject\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\ALİ\Source\Repos\FileReaderProject_\FileReaderProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll

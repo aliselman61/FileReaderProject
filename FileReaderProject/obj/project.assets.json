@@ -107,22 +107,6 @@
           }
         }
       },
-      "System.Drawing.Common/9.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net462/_._": {}
-        }
-      },
       "System.IO.FileSystem.Primitives/4.3.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -336,22 +320,6 @@
           "lib/net461/System.Buffers.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Drawing.Common/9.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net462/_._": {}
         }
       },
       "System.IO.FileSystem.Primitives/4.3.0": {
@@ -569,22 +537,6 @@
           }
         }
       },
-      "System.Drawing.Common/9.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net462/_._": {}
-        }
-      },
       "System.IO.FileSystem.Primitives/4.3.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -800,22 +752,6 @@
           }
         }
       },
-      "System.Drawing.Common/9.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net462/_._": {}
-        }
-      },
       "System.IO.FileSystem.Primitives/4.3.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1029,22 +965,6 @@
           "lib/net461/System.Buffers.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Drawing.Common/9.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net462/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net462/_._": {}
         }
       },
       "System.IO.FileSystem.Primitives/4.3.0": {
@@ -1358,48 +1278,6 @@
         "version.txt"
       ]
     },
-    "System.Drawing.Common/9.0.0": {
-      "sha512": "uoozjI3+dlgKh2onFJcz8aNLh6TRCPlLSh8Dbuljc8CdvqXrxHOVysJlrHvlsOCqceqGBR1wrMPxlnzzhynktw==",
-      "type": "package",
-      "path": "system.drawing.common/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Drawing.Common.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net8.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net462/System.Drawing.Common.dll",
-        "lib/net462/System.Drawing.Common.pdb",
-        "lib/net462/System.Drawing.Common.xml",
-        "lib/net8.0/System.Drawing.Common.dll",
-        "lib/net8.0/System.Drawing.Common.pdb",
-        "lib/net8.0/System.Drawing.Common.xml",
-        "lib/net8.0/System.Private.Windows.Core.dll",
-        "lib/net8.0/System.Private.Windows.Core.xml",
-        "lib/net9.0/System.Drawing.Common.dll",
-        "lib/net9.0/System.Drawing.Common.pdb",
-        "lib/net9.0/System.Drawing.Common.xml",
-        "lib/net9.0/System.Private.Windows.Core.dll",
-        "lib/net9.0/System.Private.Windows.Core.xml",
-        "lib/netstandard2.0/System.Drawing.Common.dll",
-        "lib/netstandard2.0/System.Drawing.Common.pdb",
-        "lib/netstandard2.0/System.Drawing.Common.xml",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "system.drawing.common.9.0.0.nupkg.sha512",
-        "system.drawing.common.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
     "System.IO.FileSystem.Primitives/4.3.0": {
       "sha512": "6QOb2XFLch7bEc4lIcJH49nJN2HV+OC3fHDgsLVsBVBk3Y4hFAnOBGzJ2lUu7CyDDFo9IBWkSsnbkT6IBwwiMw==",
       "type": "package",
@@ -1604,7 +1482,6 @@
     ".NETFramework,Version=v4.8": [
       "DocumentFormat.OpenXml >= 2.11.0",
       "PdfPig >= 0.1.9",
-      "System.Drawing.Common >= 9.0.0",
       "System.Text.Encoding.CodePages >= 9.0.0"
     ]
   },
@@ -1659,10 +1536,6 @@
           "PdfPig": {
             "target": "Package",
             "version": "[0.1.9, )"
-          },
-          "System.Drawing.Common": {
-            "target": "Package",
-            "version": "[9.0.0, )"
           },
           "System.Text.Encoding.CodePages": {
             "target": "Package",

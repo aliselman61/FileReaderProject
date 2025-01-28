@@ -52,10 +52,6 @@
               "target": "Package",
               "version": "[0.1.9, )"
             },
-            "System.Drawing.Common": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
             "System.Text.Encoding.CodePages": {
               "target": "Package",
               "version": "[9.0.0, )"
